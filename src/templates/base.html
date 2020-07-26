@@ -61,9 +61,22 @@
     </nav>
     <!--/.Navbar -->
 
-    {% block body %}
-    {% endblock %}
-
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                {% block leftcol %}
+                {% endblock %}
+            </div>
+            <div class="col-8">
+                {% block body %}
+                {% endblock %}
+            </div>
+            <div class="col-sm">
+                {% block rightcol %}
+                {% endblock %}
+            </div>
+        </div>
+    </div>
 
 
     <!-- Footer -->
