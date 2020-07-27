@@ -18,9 +18,17 @@ from django.urls import path
 
 from .views import (
     home_page,
+    resume_page,
+    about_page,
+    projects_page,
+    blog_page,
 )
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home_page, name='home'),
+    path('resume', resume_page, name='resume'),
+    path('about', about_page, name='about'),
+    path('projects', projects_page, name='projects'),
+    path('blog', blog_page, name='blog'),
 ]
