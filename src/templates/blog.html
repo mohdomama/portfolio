@@ -1,8 +1,23 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block leftcol %}
+<div class="text-center">
+    <h1 class="text-primary"> The Padfoot7 Blog</h1>
+</div>
+<p class="text-muted" style="font-size:20px">
+    I mostly write about code, psycology, poetry and other random stuff. I use medium as my primary blogging
+    platform. This is an aggregator for my medium RSS feed.
+</p>
+{% endblock %}
+
+
 {% block body %}
-This is the blog page
+
+{% for entry in entries %}
+{% include 'components/blog_card.html' with entry=entry %}
+{% endfor %}
+
 
 {% endblock %}
 
