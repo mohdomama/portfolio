@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .util import rss_parser
+from .util import rss_parser, project_parser
 
 
 def home_page(request):
@@ -21,7 +21,8 @@ def about_page(request):
 
 
 def projects_page(request):
-    context = {'title': 'Projects'}
+    projects = project_parser.fetch_projects()
+    context = {'title': 'Projects', 'projects': projects}
     template_name = 'projects.html'
     return render(request, template_name, context)
 

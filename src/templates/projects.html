@@ -2,8 +2,9 @@
 {% load static %}
 
 {% block body %}
-This is the project page
-
+{% for project in projects %}
+{% include 'components/project_card.html' with details=project.0  link=project.1 %}
+{% endfor %}
 {% endblock %}
 
 {% block rightcol %}

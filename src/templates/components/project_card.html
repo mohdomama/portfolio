@@ -1,0 +1,22 @@
+<div class="col mb-4">
+    <!-- Card -->
+    <div class="card h-100 .ml-3">
+
+        <!-- Card content -->
+        <div class="card-body  rounded-bottom">
+            {% autoescape off %}
+            {{ details  }}
+            {% endautoescape %}
+
+            <hr class="bg-primary">
+
+
+            <a href="{{ link }}" class="primary-text  justify-content-end" target="_blank">
+                <h5><i class="fab fa-2x fa-github"></i> GitHub Repo</h5>
+            </a>
+
+        </div>
+
+    </div>
+    <!-- Card -->
+</div>
