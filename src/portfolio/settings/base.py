@@ -24,7 +24,7 @@ SECRET_KEY = os.environ['SECRET_KEY']
 BASE_DIR = os.path.dirname(os.path.dirname(
     os.path.dirname(os.path.abspath(__file__))))
 
-ALLOWED_HOSTS = ['127.0.0.1', 'https://padfoot7-portfolio.herokuapp.com/']
+ALLOWED_HOSTS = ["127.0.0.1", "https://padfoot7-portfolio.herokuapp.com/", "0.0.0.0"]
 
 
 # Application definition
@@ -121,7 +121,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATIC_URL = '/static/'
 
-STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
