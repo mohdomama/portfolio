@@ -11,25 +11,15 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
-
-import os
 import environ
 
 
-env = environ.Env(
-    # set casting, default value
-    DEBUG=(bool, False)
-)
-# Reading environment variables
-env_base = environ.Path(__file__) - 1
-environ.Env.read_env(
-    env_file=env_base('.env'))  # reading .env file
-
-
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = env('DEBUG')
+DEBUG = os.environ['DEBUG']
+print("************************************")
+print(DEBUG)
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = env('SECRET_KEY')
+SECRET_KEY = os.environ['SECRET_KEY']
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(
